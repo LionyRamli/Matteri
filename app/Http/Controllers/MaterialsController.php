@@ -7,6 +7,7 @@ use Illuminate\Http\Response;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Database\QueryException; 
 use App\Models\Material;
+use App\Models\CompetenceMaterial;
 use Illuminate\View\View;
 
 class MaterialsController extends Controller
@@ -31,6 +32,13 @@ class MaterialsController extends Controller
             ]);
 
             $newMaterial = Material::create($data);
+            
+            if($newMaterial){
+                $CompetenceMaterial = New CompetenceMaterial;
+                $CompetenceMaterial->id_materi = $newMaterial->id_materi;
+                $CompetenceMaterial->$request->id_materi;
+                $CompetenceMaterial->save();
+            }
 
             return redirect(route('course'))->with('success', 'Course data has been successfully added.');
         } catch (QueryException $e) {

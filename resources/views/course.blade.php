@@ -117,6 +117,7 @@
     <div class="container-fluid py-5">
     {{-- Form --}}
     @include('create')
+    <a href="{{route("relasi")}}" class="nav-item nav-link">Relasi</a>
     {{-- Form  --}}
         <div class="container py-5">
             <div class="row mx-0 justify-content-center">

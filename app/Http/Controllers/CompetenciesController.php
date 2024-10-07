@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\CompetenceMaterial;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Http\RedirectResponse;
@@ -31,6 +32,13 @@ class CompetenciesController extends Controller
             ]);
 
             $newCompetence = Competence::create($data);
+            
+            if($newCompetence){
+                $CompetenceMaterial = New CompetenceMaterial;
+                $CompetenceMaterial->id_kompetensi = $newCompetence->id_kompetensi;
+                $CompetenceMaterial->$request->id_kompetensi;
+                $CompetenceMaterial->save();
+            }
 
             return redirect(route('course'))->with('success', 'Course data has been successfully added.');
         } catch (QueryException $e) {
