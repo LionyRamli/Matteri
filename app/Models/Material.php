@@ -15,5 +15,8 @@ class Material extends Model
     {
         return $this->belongsToMany(Competence::class, 'competencies_materials', 'id_materi', 'id_kompetensi');
     }
-    
+
+    protected $fillable = [
+        'materi',
+    ];
 }

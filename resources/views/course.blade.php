@@ -115,6 +115,9 @@
 
     <!-- Courses Start -->
     <div class="container-fluid py-5">
+    {{-- Form --}}
+    @include('create')
+    {{-- Form  --}}
         <div class="container py-5">
             <div class="row mx-0 justify-content-center">
                 <div class="col-lg-8">
@@ -273,9 +276,9 @@
             <div class="row">
                 <div class="col-md-4 mb-5">
                     <h3 class="text-white mb-4">Get In Touch</h3>
-                    <p><i class="fa fa-map-marker-alt mr-2"></i>123 Street, New York, USA</p>
-                    <p><i class="fa fa-phone-alt mr-2"></i>+012 345 67890</p>
-                    <p><i class="fa fa-envelope mr-2"></i>info@example.com</p>
+                    <p><i class="fa fa-map-marker-alt mr-2"></i>SMK CINTA KASIH TZU CHI</p>
+                    <p><i class="fa fa-phone-alt mr-2"></i>0897 4967 320</p>
+                    <p><i class="fa fa-envelope mr-2"></i>lionyramli07@gmail.com</p>
                     <div class="d-flex justify-content-start mt-4">
                         <a class="text-white mr-4" href="#"><i class="fab fa-2x fa-twitter"></i></a>
                         <a class="text-white mr-4" href="#"><i class="fab fa-2x fa-facebook-f"></i></a>

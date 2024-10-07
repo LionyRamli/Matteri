@@ -13,6 +13,11 @@ class Competence extends Model
 
     public function materi()
     {
-        return $this->belongsToMany(Material::class, 'competencies_materials', 'id_kompetensi', 'id_materi');
+        
+            return $this->belongsToMany(Material::class, 'competencies_materials', 'id_kompetensi', 'id_materi');
+        
     }
+    protected $fillable = [
+        'kompetensi',
+    ];
 }
